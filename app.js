@@ -5,7 +5,7 @@ const app = express();
 //define a port number for server to listen on
 const PORT = 3003;
 app.get('/', (req, res) => {
-   res.send('Hello World');
+   res.sendFile(`${import.meta.dirname}/views/home.html`);
   
 });
 
