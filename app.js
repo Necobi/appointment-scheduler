@@ -9,6 +9,20 @@ app.get('/', (req, res) => {
   
 });
 
+app.get('/confirm-appointment', (req, res) => {
+    res.sendFile(`${import.meta.dirname}/views/confirm.html`)
+});
+
 app.listen(PORT, () => {
     console.log(`Server is runnning at http://localhost:${PORT}`);
 });
+
+
+
+
+
+
+
+
+
+
