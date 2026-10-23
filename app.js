@@ -20,16 +20,20 @@ app.get('/confirm-appointment', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirm.html`)
 });
 
+app.get('/admin', (req, res) => {
+    res.send(appointments);
+});
+
 
 
 app.post('/submit-appointment', (req, res) => {
     console.log(req.body);
-    /*const appointment = req.body;
+    const appointment = req.body;
     appointment['timestamp'] = new Date();
     console.log(appointment);
    //add order object to orders array
    appointments.push(appointment);
-   console.log(appointments);
+   //console.log(appointments);
 
    //Display confirmation page
    res.sendFile(`${import.meta.dirname}/views/confirm.html`)
