@@ -25,7 +25,7 @@ document.getElementById("appointment-form").onsubmit = () => {
     }
     
     
-   
+   return isValid;
 };
 
 
