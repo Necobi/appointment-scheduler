@@ -4,6 +4,7 @@ const app = express();
 
 //define a port number for server to listen on
 const PORT = 3003;
+app.use(express.static('public'));
 const appointments = [];
 app.use(express.urlencoded({ extended: true}));
 
