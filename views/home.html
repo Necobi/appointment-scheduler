@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="styles/style.css">
 
-       <script src="/scripts/scheduler.js" defer></script>
+       <script src="scripts/scheduler.js" defer></script>
 </head>
 <body>
 
-     <form id="appointment-form" action="#" method="get">
+     <form id="appointment-form" action="/submit-appointment" method="post">
 
             <!-- contact info -->
              
@@ -19,11 +19,14 @@
                 <label for="fname"> First Name:</label>
                 <input type="text" id="fname" name="fname">
                 <span class="err" id="err-fname">First Name is Required</span>
+
                 <label for="lname">Last Name:</label>
                 <input type="text" id="lname" name="lname">
                 <span class="err" id="err-lname">Last Name is Required</span>
+
                 <label for="text">Meeting Date</label>
                 <input type="text" id="meeting-date" name="meeting-date">
+
                  <label for="text">Meeting Time</label>
                 <input type="text" id="meeting-time" name="meeting-time">
              </fieldset>

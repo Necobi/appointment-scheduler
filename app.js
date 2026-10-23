@@ -4,17 +4,36 @@ const app = express();
 
 //define a port number for server to listen on
 const PORT = 3003;
-app.use(express.static('public'));
+
 const appointments = [];
+
+app.use(express.static('public'));
+
 app.use(express.urlencoded({ extended: true}));
 
-app.get('/', (req, res) => {
+ app.get('/', (req, res) => {
    res.sendFile(`${import.meta.dirname}/views/home.html`);
   
 });
 
 app.get('/confirm-appointment', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirm.html`)
+});
+
+
+
+app.post('/submit-appointment', (req, res) => {
+    console.log(req.body);
+    /*const appointment = req.body;
+    appointment['timestamp'] = new Date();
+    console.log(appointment);
+   //add order object to orders array
+   appointments.push(appointment);
+   console.log(appointments);
+
+   //Display confirmation page
+   res.sendFile(`${import.meta.dirname}/views/confirm.html`)
+    //res.sendFile(`${import.meta.dirname}/views/confirm.html`)*/
 });
 
 

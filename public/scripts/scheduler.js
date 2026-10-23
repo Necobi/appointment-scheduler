@@ -26,7 +26,7 @@ document.getElementById("appointment-form").onsubmit = () => {
     
     
    
-}
+};
 
 
 function clearErrors() {
